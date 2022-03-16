@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laden | Login</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="../CSS/regis1.css">
+</head>
+<body>
+    <header>
+        <nav class="nav__cont">
+            <img src="../IMG/logo-k.png" alt="logo">
+        </nav>
+    </header>
+    <div class="bg-img">
+        <div class="login-container">
+            <form class="formulario" action="" id="formulario">
+                <h1>Crea tu Cuenta</h1>
+                <p>¿Ya tienes una cuenta? <a href="sing.html"> Inicia Sesión.</a></p>
+                <p>¿Deseas crear una cuenta empresarial? <a href="Regis2.html">Haz clic aquí.</a></p>
+                
+                <!-- Grupo Nombre -->
+                <div class="formulario__grupo" id="grupo__nombre">
+                    <label for="nombre" class="formulario__label">Nombre(s)</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Nombre(s)">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El nombre solo debe contener letras o guiones bajos.</p>
+                </div>
+                
+                <!-- Grupo Apellidos -->
+                <div class="formulario__grupo" id="grupo__apellidos">
+                    <label for="apellidos" class="formulario__label">Apellidos</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="apellidos" id="apellidos" placeholder="Apellidos">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">Los apellidos solo deben contener letras o guiones bajos.</p>
+                </div>
+
+                <!-- Grupo Correo -->
+                <div class="formulario__grupo" id="grupo__correo">
+                    <label for="correo" class="formulario__label">Correo Electronico</label>
+                    <div class="formulario__grupo-input">
+                        <input type="email" class="formulario__input" name="correo" id="correo" placeholder="Correo Electronico">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos o guiones bajos.</p>
+                </div>
+
+                <!-- Grupo Contraseña -->
+                <div class="formulario__grupo contras" id="grupo__contra">
+                    <label for="contra" class="formulario__label">Contraseña</label>
+                    <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input" name="contra" id="contra" placeholder="Contraseña">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <div class="vistax" id="eye1">
+                        <i class=" fas fa-eye-slash"></i>
+                    </div>
+                    <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 digitos.</p>
+                </div>
+
+                <!-- Grupo Contraseña 2 -->
+                <div class="formulario__grupo contras" id="grupo__contra2">
+                    <label for="contra2" class="formulario__label">Repetir Contraseña</label>
+                    <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input" name="contra2" id="contra2" placeholder="Confirma contraseña">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <div class="vistax" id="eye2">
+                        <i class="fas fa-eye-slash"></i>
+                    </div>
+                    <p class="formulario__input-error">Las contraseñas deben de ser iguales.</p>
+                </div>
+
+                <!-- Grupo T&C -->
+                <div class="formulario__grupo" id="grupo__terminos">
+                    <label for="" class="formulario__label">
+                        <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos" >
+                        <p class="term">Acepto los <a href="terminos.html">Terminos y Condiciones </a> y estoy de acuerdo con la 
+                        <a href="privacidad.html">Declaración de privacidad.</a></p> 
+                    </label>
+                </div>
+
+                <div class="formulario__mensaje-error" id="formulario__mensaje-error">
+                    <p><i class=" fas fa-exclamation-triangle"><b> Error:</b> Por favor rellena el formulario corectamente.</i></p>
+                </div>
+
+                <div class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+                    <p><i class=" fas fa-check"><b> Listo:</b> Formulario enviado exitosamente.</i></p>
+                </div>
+
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                    <button type="submit" class="formulario__btn">Crear Cuenta</button>
+                </div> 
+                
+            </form>
+        </div>
+    </div>
+
+    <script src="../JS/regis.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+</html>
