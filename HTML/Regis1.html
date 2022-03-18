@@ -58,156 +58,134 @@
 			</div>
 		</header>
 
-		<div class="bg-img">
-			<div class="login-container">
-				<form class="formulario" action="" id="formulario">
-					<h1>Crea tu Cuenta</h1>
-					<p>
-						¿Ya tienes una cuenta?
-						<a class="fomulario__link" href="sing.html"> Inicia Sesión</a>
-					</p>
-					<p>
-						¿Deseas crear una cuenta empresarial?
-						<a class="fomulario__link" href="Regis2.html">Haz clic aquí.</a>
-					</p>
+		<div class="formulario__container">
+			<form class="formulario" id="formulario">
+				<h1>Registro</h1>
 
-					<!-- Grupo Nombre -->
-					<div class="formulario__grupo" id="grupo__nombre">
+				<!-- Grupo Nombre -->
+				<div class="formulario__grupo" id="grupo__nombre">
+					<div class="formulario__grupo-input">
+						<input
+							type="text"
+							class="formulario__input"
+							name="nombre"
+							id="nombre"
+							placeholder=" "
+						/>
 						<label for="nombre" class="formulario__label">Nombre(s)</label>
-						<div class="formulario__grupo-input">
-							<input
-								type="text"
-								class="formulario__input"
-								name="nombre"
-								id="nombre"
-								placeholder="Nombre(s)"
-							/>
-						</div>
-						<p class="formulario__input-error">
-							El nombre solo debe contener letras o guiones bajos.
-						</p>
 					</div>
+					<p class="formulario__input-error">
+						El nombre solo debe contener letras o guiones bajos.
+					</p>
+				</div>
+				
 
-					<!-- Grupo Apellidos -->
-					<div class="formulario__grupo" id="grupo__apellidos">
-						<label for="apellidos" class="formulario__label">Apellidos</label>
-						<div class="formulario__grupo-input">
-							<input
-								type="text"
-								class="formulario__input"
-								name="apellidos"
-								id="apellidos"
-								placeholder="Apellidos"
-							/>
-						</div>
-						<p class="formulario__input-error">
-							Los apellidos solo deben contener letras o guiones bajos.
-						</p>
+				<!-- Grupo Correo -->
+				<div class="formulario__grupo" id="grupo__correo">
+					<div class="formulario__grupo-input">
+						<input
+						type="email"
+						class="formulario__input"
+						name="correo"
+						id="correo"
+						placeholder=" "
+						/>
+						<label for="correo" class="formulario__label">Correo Electronico</label>
 					</div>
+					<p class="formulario__input-error">
+						El correo solo puede contener letras, numeros, puntos o guiones bajos.
+					</p>
+				</div>
 
-					<!-- Grupo Correo -->
-					<div class="formulario__grupo" id="grupo__correo">
-						<label for="correo" class="formulario__label"
-							>Correo Electronico</label
-						>
-						<div class="formulario__grupo-input">
-							<input
-								type="email"
-								class="formulario__input"
-								name="correo"
-								id="correo"
-								placeholder="Correo Electronico"
-							/>
-						</div>
-						<p class="formulario__input-error">
-							El correo solo puede contener letras, numeros, puntos o guiones
-							bajos.
-						</p>
-					</div>
-
-					<!-- Grupo Contraseña -->
-					<div class="formulario__grupo contras" id="grupo__contra">
+				<!-- Grupo Contraseña -->
+				<div class="formulario__grupo" id="grupo__contra">
+					<div class="formulario__grupo-input">
+						<input
+						type="password"
+						class="formulario__input"
+						name="contra"
+						id="contra"
+						placeholder=" "
+						/>
 						<label for="contra" class="formulario__label">Contraseña</label>
-						<div class="formulario__grupo-input">
-							<input
-								type="password"
-								class="formulario__input"
-								name="contra"
-								id="contra"
-								placeholder="Contraseña"
-							/>
-							<span><i id="toggle" class="fas fa-eye-slash"></i></span>
-						</div>
-						<p class="formulario__input-error">
-							La contraseña tiene que ser de 4 a 12 digitos.
-						</p>
+						<span><i id="toggle" class="fas fa-eye-slash"></i></span>
 					</div>
+					<p class="formulario__input-error">
+						La contraseña tiene que ser de 4 a 12 digitos.
+					</p>
+				</div>
 
-					<!-- Grupo Contraseña 2 -->
-					<div class="formulario__grupo contras" id="grupo__contra2">
-						<label for="contra2" class="formulario__label"
-							>Repetir Contraseña</label
-						>
-						<div class="formulario__grupo-input">
-							<input
-								type="password"
-								class="formulario__input"
-								name="contra2"
-								id="contra2"
-								placeholder="Confirma contraseña"
-							/>
-							<span><i id="toggle1" class="fas fa-eye-slash"></i></span>
-						</div>
-						<p class="formulario__input-error">
-							Las contraseñas deben de ser iguales.
-						</p>
+				<!-- Grupo Contraseña 2 -->
+				<div class="formulario__grupo" id="grupo__contra2">
+					<div class="formulario__grupo-input">
+						<input
+						type="password"
+						class="formulario__input"
+						name="contra2"
+						id="contra2"
+						placeholder=" "
+						/>
+						<label for="contra2" class="formulario__label">Repite Contraseña</label>
+						<span><i id="toggle1" class="fas fa-eye-slash"></i></span>
 					</div>
+					<p class="formulario__input-error">
+						Las contraseñas deben de ser iguales.
+					</p>
+				</div>
 
-					<!-- Grupo T&C -->
-					<div class="formulario__grupo" id="grupo__terminos">
-						<label for="" class="formulario__label">
-							<input
-								class="formulario__checkbox"
-								type="checkbox"
-								name="terminos"
-								id="terminos"
-							/>
-							<p class="term">
-								Acepto los
-								<a class="fomulario__link" href="terminos.html"
-									>Terminos y Condiciones
-								</a>
-								y estoy de acuerdo con la
-								<a class="fomulario__link" href="privacidad.html"
-									>Declaración de privacidad.</a
-								>
-							</p>
-						</label>
-					</div>
+				<div class="grupo__parrafo">
+					<p class="formulario__parrafo">
+						¿Ya tienes un cuenta?
+						<a href="entrar.html" class="formulario__link">Inicia Sesión</a>
+					</p>
+					<p class="formulario__parrafo">
+						¿Deseas crear una cuenta empresarial?
+						<a href="Regis2.html" class="formulario__link">Haz click aquí.</a>
+					</p>
+				</div>
 
-					<!-- Mensajes de error o exito -->
-					<div class="formulario__mensaje-error" id="formulario__mensaje-error">
-						<p>
-							<i class="fas fa-exclamation-triangle"
-								><b> Error:</b> Por favor rellena el formulario corectamente.</i
+				<!--
+				<div class="formulario__grupo" id="grupo__terminos">
+					<label for="" class="formulario__label">
+						<input
+							class="formulario__checkbox"
+							type="checkbox"
+							name="terminos"
+							id="terminos"
+						/>
+						<p class="terminos">
+							Acepto los
+							<a class="fomulario__link" href="terminos.html"
+								>Terminos y Condiciones
+							</a>
+							y estoy de acuerdo con la
+							<a class="fomulario__link" href="privacidad.html"
+								>Declaración de privacidad.</a
 							>
 						</p>
-					</div>
+					</label>
+				</div>
+				-->
 
-					<div class="formulario__mensaje-exito" id="formulario__mensaje-exito">
-						<p>
-							<i class="fas fa-check"
-								><b> Listo:</b> Formulario enviado exitosamente.</i
-							>
-						</p>
-					</div>
+				<!-- Mensajes de error o exito -->
+				<div class="formulario__mensaje-error" id="formulario__mensaje-error">
+					<p>
+						<i class="fas fa-exclamation-triangle"><b> Error:</b> Por favor rellena el formulario corectamente.</i>
+					</p>
+				</div>
 
-					<!-- Boton para enviar -->
-					<div class="formulario__grupo formulario__grupo-btn-enviar">
-						<button type="submit" class="formulario__btn">Crear Cuenta</button>
-					</div>
-				</form>
-			</div>
+				<div class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+					<p>
+						<i class="fas fa-check"><b> Listo:</b> Formulario enviado exitosamente.</i>
+					</p>
+				</div>
+
+				<!-- Boton para enviar -->
+				<div class="formulario__grupo formulario__grupo-btn-enviar">
+					<button type="submit" class="formulario__btn">Crear Cuenta</button>
+				</div>
+
+			</form>
 		</div>
 
 		<script src="../JS/regis.js"></script>
@@ -215,5 +193,6 @@
 			src="https://kit.fontawesome.com/2c36e9b7b1.js"
 			crossorigin="anonymous"
 		></script>
+
 	</body>
 </html>

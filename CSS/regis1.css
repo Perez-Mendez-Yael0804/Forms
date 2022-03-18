@@ -1,36 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
-/*=============== VARIABLES CSS ===============*/
-:root {
-	--header-height: 3rem;
+/*============  GOOGLE FONTS  =============*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
 
-	/*========== Colors ==========*/
-	--blanco: #ffff;
-	--negro: #000000;
-	--gris: #c4c4c4;
-	--gris1: #474a56;
-	--gris2: #d2d7ed;
-	--gris3: #dcd6f7;
-	--azul: #6c79db;
-	/*GENERAL*/
-	--azul1: #f4eeff;
-	--azul2: #dcd6f7;
-	--azul3: #a6b1e1;
-	--azul4: #424874;
-	/*ADMIN*/
-	--verde1: #d4ecdd;
-	--verde2: #345b63;
-	--Verde3: #152d35;
-	--verde4: #112031;
-	/*VENDEDOR*/
-	--rosa1: #ff9898;
-	--rosa2: #cf455c;
-	--rosa3: #971549;
-	--rosa4: #470031;
+/*============  VARIABLES CSS  =============*/
+:root {
+	/*============  Colores  =============*/
+	--color-error: #bb2929;
+	--color-correcto: #1ed12d;
+	--color-focus: #414b9a;
+	--main-50: #DDDFF1;
+	--main-300: #7680c6;
+	--main-400: #5864be;
+	--color-parrafo: #000000;
+	--color-link: #424874;
+	--fondo-form: rgba(255, 255, 255, 1);
+	--color-mensaje: #ffffff;
+
+	/*============  Fuentes y Tipografías  =============*/
+	--body-font: "Manrope", sans-serif;
+	--encabezado-font: "Inter", sans-serif;
+	--small-font: 0.75rem;
+	--normal-font: 1rem;
+	--encabezado-font: 1.5rem;
+	--responsive-parrafo: .9rem;
+	--responsive-p-error: .8rem;
 }
 
-* {
-	margin: 0;
-	padding: 0;
+/*============  BASE  =============*/
+*,
+::before,
+::after {
 	box-sizing: border-box;
 }
 
@@ -39,171 +38,142 @@ html {
 }
 
 body {
-	font-family: "Montserrat", sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: var(--body-font);
+	font-size: var(--normal-font);
 }
 
-.nav__cont {
-	height: 70px;
-	width: 100%;
-	background: var(--gris3);
-	padding: 10px;
+h1 {
+	margin: 0;
+	font-family: var(--encabezado-font);
+	margin-bottom: 2.5rem;
+	color: var(--color-parrafo);
 }
 
-.nav__cont img {
-	width: 90px;
-	height: 45px;
-	margin-top: 3px;
-	margin-left: 30px;
+.header{
+	position: relative;
 }
 
-.bg-img {
+/*=============================================
+=                   FORMUALRIO                   =
+=============================================*/
+
+.formulario__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-image: url(../IMG/colores.jpeg);
-	height: 1020px;
-	background-size: cover;
-	background-position: center;
-	width: 100%;
 }
 
-.login-container {
-	max-width: 550px;
-	padding-top: 20px;
-	margin: 0 auto;
-}
 .formulario {
-	width: 100%;
+	max-width: 90%;
 	margin: 40px auto;
-	padding: 60px 32px;
-	background: rgba(255, 255, 255, 0.8);
-	border-radius: 30px;
+	padding: 3.5rem 2.5rem;
+	background: var(--fondo-form);
+	border-radius: 2rem;
+	position: static;
 }
 
-.formulario p {
-	padding: 10px 0px 15px;
-	text-align: justify;
+.grupo__parrafo{
+	margin-top: 3rem;
 }
 
-.formulario__grupo .term {
-	font-size: 15px;
-	margin: -30px 0px 0px 20px;
+.formulario__parrafo {
+	text-align: left;
+	font-size: var(--normal-font);
+	color: var(--color-parrafo);
+	padding-bottom: .6rem;
 }
 
-.formulario__checkbox {
-	height: 15px;
-	width: 15px;
-}
+/**
+*
+* Estilos para terminos
+*
+*/
 
-.formulario__grupo input::placeholder {
-	visibility: hidden;
-}
-
-.formulario h1 {
-	margin-top: -20px;
-	margin-bottom: 10px;
-}
-
-.formulario a {
+.formulario__link {
 	text-decoration: none;
-	color: var(--azul4);
+	color: var(--color-link);
 	font-weight: bold;
 }
 
-.formulario a:hover {
+.formulario__link:hover {
 	text-decoration: underline;
 }
 
-.formulario__label {
-	display: block;
-	font-weight: 700;
-	font-size: 17px;
-	padding: 10px;
-	cursor: pointer;
-	padding: 15px 10px 10px;
-	text-align: justify;
-	margin-top: 25px;
+.formulario__grupo{
+	margin-bottom: 3rem;
 }
 
-.formulario__label:first-child {
-	margin-top: 10px;
-}
-
-.formulario__grupo-input {
+.formulario__grupo-input{
 	position: relative;
 }
 
 .formulario__input {
 	width: 100%;
-	background: #fff;
-	border: 3px solid transparent;
-	border-radius: 5px;
-	height: 45px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: none;
+	border: 2px solid var(--main-300);
+	border-radius: 0.5rem;
 	line-height: 45px;
-	padding: 0 40px 0 10px;
 	transition: 0.3s ease all;
+	outline: none;
+	padding: 1.3rem;
+	z-index: 1;
+	position: absolute;
 }
 
-.formulario__input:focus {
-	border: 3px solid #0075ff;
-	outline: none;
-	box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+.formulario__label {
+	font-weight: 700;
+	color: var(--color-focus);
+	position: relative;
+	top: .8rem;
+	left: 1rem;
+	background-color: var(--color-mensaje);
+	transition: .3s;
 }
 
 .formulario__input-error {
-	font-size: 13px;
-	margin-bottom: 0;
+	font-size: 0.8rem;
+	padding: 0 10px;
+	margin-top: 2.3rem;
+	margin-bottom: -1.3rem;
 	display: none;
-	padding: 0;
-}
-
-.formulario__input-error:nth-child(4) {
-	position: absolute;
-	margin-top: -42px;
 }
 
 .formulario__input-error-activo {
 	display: flex;
-	color: #000000;
-}
-
-.formulario__validacion-estado {
-	position: absolute;
-	right: 10px;
-	bottom: 15px;
-	z-index: 100;
-	font-size: 16px;
-	opacity: 0;
-}
-
-.formulario__checkbox {
-	margin-right: 10px;
-}
-
-.formulario__grupo-terminos,
-.formulario__mensaje-error,
-.formulario__mensaje-exito,
-.formulario__grupo-btn-enviar {
-	grid-column: span 2;
+	color: var(--color-parrafo);
 }
 
 .formulario__mensaje-error {
 	height: 45px;
-	line-height: 25px;
-	padding: 0 45px;
-	background: #f66860;
+	line-height: 45px;
+	justify-content: center;
+	padding: 0 .9rem;
+	background: var(--color-error);
 	border-radius: 3px;
 	display: none;
+	align-items: center;
+	color: var(--color-mensaje);
+	margin-top: 1rem;
 }
 
 .formulario__mensaje-exito {
 	height: 45px;
-	line-height: 25px;
-	background: #1ed12d;
-	padding: 0 85px;
+	line-height: 45px;
+	background: var(--color-correcto);
+	justify-content: center;
 	border-radius: 3px;
 	display: none;
-}
-
-.formulario__mensaje p {
-	margin: 0;
+	align-items: center;
+	font-family: var(--body-font);
+	color: var(--color-mensaje);
+	margin-top: 1rem;
+	padding: 0 3.5rem;
 }
 
 .formulario__mensaje-error-activo {
@@ -218,6 +188,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-top: 2rem;
 }
 
 .formulario__btn {
@@ -227,13 +198,12 @@ body {
 	cursor: pointer;
 	transition: 0.1s ease all;
 	width: 70%;
-	border-radius: 7px;
-	margin-top: 35px;
-	color: var(--blanco);
-	background: var(--azul4);
-	border: none;
+	border-radius: 7px;	margin-top: 2rem;
+	color: var(--color-mensaje);
+	background: var(--main-400);
 	font-weight: bolder;
-	font-size: 15px;
+	font-size: var(--normal-font);
+	margin-top: -.5rem;
 }
 
 .formulario__btn:hover {
@@ -241,86 +211,114 @@ body {
 	transform: scale(1.05);
 }
 
-/*=============================================
-=            Estilos para validacion          =
-=============================================*/
-
+/* Ver contraseña */
 #toggle,
 #toggle1 {
 	position: absolute;
-	right: 20px;
+	right: 15px;
 	top: 50%;
-	transform: translateY(-50%);
+	transform: translateY(20%);
+	z-index: 10;
 	cursor: pointer;
 	font-size: 20px;
-	color: #000000;
+	color: var(--color-parrafo);
 }
 
+/* Input focus move up label */
+.formulario__input:focus + .formulario__label{
+	top: -.5rem;
+	left: .8rem;
+	font-size: var(--small-font);
+	font-weight: 500;
+	z-index: 10;
+	padding: 0 5px;
+}
+
+/* input focus sticky top label */
+.formulario__input:not(:placeholder-shown).formulario__input:not(:focus) + .formulario__label{
+	top: -.5rem;
+	font-size: var(--small-font);
+	font-weight: 500;
+	z-index: 10;
+	padding: 0 5px;
+}
+
+/* input focus */
+.formulario__input:focus {
+	border: 2px solid var(--color-focus);
+	outline: none;
+}
+
+
+/*============  VALIDACIONES  =============*/
 .formulario__grupo-correcto {
-	color: #1ed12d;
+	color: var(--color-correcto);
 	opacity: 1;
 }
 
-.formulario__grupo-correcto.formulario__label {
-	color: #1ed12d;
+.formulario__grupo-correcto .formulario__label {
+	color: var(--color-correcto);
 }
 
 .formulario__grupo-correcto .formulario__input {
-	border: 3px solid #1ed12d;
+	border: 2px solid var(--color-correcto);
 }
 
 .formulario__grupo-incorrecto .formulario__label {
-	color: #bb2929;
+	color: var(--color-error);
 }
 
 .formulario__grupo-incorrecto {
-	color: #bb2929;
+	color: var(--color-error);
 	opacity: 1;
 }
 
 .formulario__grupo-incorrecto .formulario__input {
-	border: 3px solid #bb2929;
+	border: 2px solid var(--color-error);
 }
 
-/*=============================================
-=                   Mediaqueries              =
-=============================================*/
+/*============  End of FORMUALRIO  =============*/
 
-@media screen and (max-width: 600px) {
+
+/*============  MEDIA QUERIES  =============*/
+
+@media screen and (max-width: 550px) {
+	.formulario__container{
+		background-image: url(../IMG/arcoiris.jepg.jpeg)
+	}
+	
 	.formulario {
-		width: 80%;
-		height: 80%;
+		max-width: 80%;
+		margin: 40px auto;
+		padding: 3.5rem 2.5rem;
+		background: var(--fondo-form);
+		border-radius: 2rem;
+		border-radius: 1rem;
 	}
 
-	.formulario__grupo {
-		box-sizing: border-box;
-		width: 100%;
+	.formulario__parrafo{
+		font-size: var(--responsive-parrafo);
+		justify-content: left;
 	}
 
-	.formulario p {
-		font-size: 13.5px;
-		text-align: justify;
+	.formulario__input-error{
+		font-size: var(--responsive-p-error);
+		justify-content: left;
 	}
 
-	.formulario input {
-		margin-bottom: 10px;
-		border-radius: 15px;
+	.formulario__mensaje-error {
+		height: 50px;
+		padding: .5rem 1rem;
+		text-align: center;
+		font-size: var(--responsive-parrafo);
 	}
-
-	.formulario__validacion-estado {
-		padding-bottom: 10px;
-	}
-
-	.contras {
-		width: 82%;
-		box-sizing: border-box;
-	}
-
-	.vistax {
-		border-radius: 15px;
-		display: inline-flex;
-		box-sizing: content-box;
+	
+	.formulario__mensaje-exito {
+		height: 50px;
+		margin-top: 1rem;
+		padding-top: .5rem;
+		font-size: var(--responsive-parrafo);
+		text-align: center;
 	}
 }
 
-/*============  End of Mediaqueries  =============*/

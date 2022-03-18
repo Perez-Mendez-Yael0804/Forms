@@ -22,10 +22,6 @@ const validarFormu = (e) => {
 			validarCampo(expresiones.nombre, e.target, 'nombre');
 		break;
 		
-		case "apellidos":
-			validarCampo(expresiones.nombre, e.target, 'apellidos');
-		break;
-		
 		case "correo":
 			validarCampo(expresiones.correo, e.target, 'correo');
 		break;
@@ -116,20 +112,21 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	const terminos = document.getElementById('terminos');
-	if(campos.nombre && campos.apellidos && campos.contra && campos.correo  && terminos.checked ){
+	if(campos.nombre && campos.contra && campos.correo ){
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-error').classList.remove('formulario__mensaje-error-activo');
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
+		//Ojo1
+		toggle.classList.remove('fa-eye');
+		toggle.classList.add('fa-eye-slash');
+
+		//Ojo 2
+		toggle1.classList.remove('fa-eye');
+		toggle1.classList.add('fa-eye-slash');
+
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
-
-			//Ojo1
-			toggle.classList.remove('fa-eye');
-
-			//Ojo 2
-			toggle1.classList.remove('fa-eye');
-
 		}, 5000);
 
 		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
