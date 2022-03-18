@@ -1,0 +1,320 @@
+/* ================ GOOGLE FONTS ================ */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+
+/* ================ VARIABLES CSS ================  */
+/* ======== FONTS ======== */
+:root {
+	--heading-font: "Inter", sans-serif;
+	--body-font: "Manrope", sans-serif;
+
+	--h1-font-size: 2.5rem;
+	--h2-font-size: 2rem;
+	--h3-font-size: 1.5rem;
+	--h4-font-size: 1.25rem;
+	--bigger-font-size: 18px;
+	--regular-font-size: 16px;
+	--small-font-size: 14px;
+
+	--main-header-height: 3.5rem;
+	--secondary-header-height: 100vh;
+	--bottom-bar-height: 3.5rem;
+	--body-m-top: var(--main-header-height);
+	--body-m-bottom: var(--bottom-bar-height);
+
+	--white: #fff;
+	--black: #000;
+}
+/* ================ COLORS ================ */
+
+/* ======== MAIN ======== */
+:root {
+	--main-color-50: #dddff1;
+	--main-color-100: #bbbfe2;
+	--main-color-200: #999fd4;
+	--main-color-300: #7680c6;
+	--main-color-400: #5864be;
+	--main-color-500: #414b9a;
+	--main-color-600: #363f81;
+	--main-color-700: #2b3267;
+	--main-color-800: #20264d;
+	--main-color-900: #161934;
+}
+/* ======== ENTERPRISE ======== */
+:root {
+	--enterprise-color-50: #fadce8;
+	--enterprise-color-100: #f3a8c6;
+	--enterprise-color-200: #ee85af;
+	--enterprise-color-300: #e53f82;
+	--enterprise-color-400: #de1e6b;
+	--enterprise-color-500: #971549;
+	--enterprise-color-600: #7f113d;
+	--enterprise-color-700: #660e31;
+	--enterprise-color-800: #4c0a25;
+	--enterprise-color-900: #330719;
+}
+/* ======== ADMIN ======== */
+:root {
+	--admin-color-50: #e2faf9;
+	--admin-color-100: #caf6f4;
+	--admin-color-200: #95ede9;
+	--admin-color-300: #2bdbd2;
+	--admin-color-400: #1daba4;
+	--admin-color-500: #14746f;
+	--admin-color-600: #105e5a;
+	--admin-color-700: #0c4744;
+	--admin-color-800: #082f2d;
+	--admin-color-900: #041817;
+}
+/* ======== BLUE ======== */
+:root {
+	--blue-50: #f1f8fe;
+	--blue-100: #e1f1fd;
+	--blue-200: #a6d6f9;
+	--blue-300: #88c8f7;
+	--blue-400: #61b7f4;
+	--blue-500: #1292ee;
+	--blue-600: #0f80d1;
+	--blue-700: #0c6db3;
+	--blue-800: #0a5b95;
+	--blue-900: #192e3d;
+}
+/* ======== GREEN ======== */
+:root {
+	--green-50: #f1fdf9;
+	--green-100: #dffbf2;
+	--green-200: #98f4d7;
+	--green-300: #65eec2;
+	--green-400: #31e8ae;
+	--green-500: #16ca92;
+	--green-600: #12a274;
+	--green-700: #0d7957;
+	--green-800: #09513a;
+	--green-900: #063727;
+}
+/* ======== YELLOW ======== */
+:root {
+	--yellow-50: #fff9f0;
+	--yellow-100: #fff6e5;
+	--yellow-200: #ffeac6;
+	--yellow-300: #ffdca0;
+	--yellow-400: #ffce79;
+	--yellow-500: #ffb940;
+	--yellow-600: #e6a73a;
+	--yellow-700: #b3822d;
+	--yellow-800: #805d20;
+	--yellow-900: #30312b;
+}
+/* ======== RED ======== */
+:root {
+	--red-50: #fef2f2;
+	--red-100: #fbd7dd;
+	--red-200: #f6aeba;
+	--red-300: #f28698;
+	--red-400: #ed5d75;
+	--red-500: #e93553;
+	--red-600: #ce1735;
+	--red-700: #9a1128;
+	--red-800: #670b1b;
+	--red-900: #37060e;
+}
+/* ======== Z-INDEX ======== */
+:root {
+	--z-tooltip: 100;
+	--z-fixed: 10;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg-color: #fbfdfe;
+		--bg-color-alt: #ecf0f3;
+		--border-color: #d6dadc;
+		--lighter-color: #b7c0c7;
+		--light-color: #8d99a5;
+		--text-color: #687782;
+		--title-color: #26313a;
+		--scrollbar-color: #606060;
+		--scrollbar-color-hover: #909090;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-color: #212529;
+		--bg-color-alt: #343a40;
+		--border-color: #495057;
+		--lighter-color: rgba(59, 64, 68, 0.5);
+		--light-color: #a4adb6;
+		--text-color: #c4cbd2;
+		--title-color: #fbfcfc;
+		--scrollbar-color: #aaaaaa;
+		--scrollbar-color-hover: #717171;
+	}
+}
+
+@media (min-width: 1280px) {
+	:root {
+		--h1-font-size: 3rem;
+		--h2-font-size: 2.5rem;
+		--h3-font-size: 1.75rem;
+		--h4-font-size: 1.313rem;
+	}
+}
+
+@media (min-width: 768px) {
+	:root {
+		--main-header-height: 4.5rem;
+		--secondary-header-height: 3rem;
+		--body-m-top: calc(
+			var(--main-header-height) + var(--secondary-header-height)
+		);
+		--body-m-bottom: 0;
+	}
+}
+
+/* ================ BASE ================ */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font: var(--regular-font-size) var(--body-font);
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	margin-top: var(--body-m-top);
+	margin-bottom: var(--body-m-bottom);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	background-color: var(--bg-color);
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: var(--scrollbar-color);
+}
+::-webkit-scrollbar-thumb:hover {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: var(--scrollbar-color-hover);
+}
+
+::-moz-selection {
+	color: var(--white);
+	background: var(--main-color-400);
+}
+::selection {
+	color: var(--white);
+	background: var(--main-color-400);
+}
+
+h1 {
+	font: normal normal normal bold var(--h1-font-size) / 140% var(--heading-font);
+}
+
+h2 {
+	font: normal normal normal bold var(--h2-font-size) / 140% var(--heading-font);
+}
+
+h3 {
+	font: normal normal normal bold var(--h3-font-size) / 140% var(--heading-font);
+}
+
+h4 {
+	font: normal normal normal bold var(--h4-font-size) / 140% var(--heading-font);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: var(--title-color);
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* ================ REUSABLE CSS CLASSES ================ */
+.section {
+	padding: 1.5rem 1.25rem;
+}
+
+.section__title {
+	color: var(--title-color);
+	/* text-align: center; */
+	margin-bottom: 1.5rem;
+}
+
+.section__height {
+	height: 100vh;
+}
+
+.title {
+	fill: var(--title-color);
+}
+.text {
+	fill: var(--text-color);
+}
+
+.text-center {
+	text-align: center;
+}
+
+/* ================ LAYOUT ================ */
+.container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ================ HEADER ================ */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: var(--z-fixed);
+	transition: 0.4s;
+}
+
+/* ================ LOGO ================ */
+.main-nav__logo-svg .title {
+	fill: var(--main-nav-logo-title);
+}
+
+.main-nav__logo-svg .text {
+	fill: var(--main-nav-logo-text);
+}
+
+.logo-morado {
+	fill: var(--logo-morado);
+}

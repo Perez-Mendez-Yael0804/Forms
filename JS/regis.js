@@ -46,15 +46,11 @@ const validarCampo = (expresion, input, campo) => {
 	if(expresion.test(input.value)){
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
-		document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
-		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle');
 		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
 		campos[campo] = true;
 	} else {
 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
-		document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle');
-		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle');
 		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
 		campos[campo] = false;
 	}
@@ -67,54 +63,49 @@ const validarContra2 = () => {
 	if(inputContra1.value !== inputContra2.value){
 		document.getElementById(`grupo__contra2`).classList.add('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__contra2`).classList.remove('formulario__grupo-correcto');
-		document.querySelector(`#grupo__contra2 i`).classList.add('fa-times-circle');
-		document.querySelector(`#grupo__contra2 i`).classList.remove('fa-check-circle');
 		document.querySelector(`#grupo__contra2 .formulario__input-error`).classList.add('formulario__input-error-activo');
 		campos[contra] = false;
 	}else{
 		document.getElementById(`grupo__contra2`).classList.remove('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__contra2`).classList.add('formulario__grupo-correcto');
-		document.querySelector(`#grupo__contra2 i`).classList.remove('fa-times-circle');
-		document.querySelector(`#grupo__contra2 i`).classList.add('fa-check-circle');
 		document.querySelector(`#grupo__contra2 .formulario__input-error`).classList.remove('formulario__input-error-activo');
 		campos[contra] = true;
 	}
 }
 
-const eye1 = document.getElementById('eye1');
-const eye2 = document.getElementById('eye2');
+const contra1 = document.getElementById('contra');
+const contra2 = document.getElementById('contra2');
 
-eye1.addEventListener('click', (e) => {
-	const inputContra1 = document.getElementById('contra');
-	if(inputContra1.type == "password"){
-		inputContra1.type = "text";
-		document.getElementById(`eye1`).classList.add('vistax');
-		document.querySelector(`#eye1 i`).classList.add('fa-eye');
-		document.querySelector(`#eye1 i`).classList.remove('fa-eye-slash');
+const toggle = document.getElementById('toggle');
+const toggle1 = document.getElementById('toggle1');
+
+VerContraseña = () => {
+	if(contra1.type == 'password'){
+		contra1.setAttribute('type', 'text');
+		toggle.classList.remove('fa-eye-slash');
+		toggle.classList.add('fa-eye');
 	}else{
-		inputContra1.type = "password";
-		document.getElementById(`eye1`).classList.add('vistax');
-		document.querySelector(`#eye1 i`).classList.remove('fa-eye');
-		document.querySelector(`#eye1 i`).classList.add('fa-eye-slash');
+		toggle.classList.add('fa-eye-slash');
+		toggle.classList.remove('fa-eye');
+		contra1.setAttribute('type', 'password');
 	}
-})
+}
 
-eye2.addEventListener('click', (e) => {
-	const inputContra2 = document.getElementById('contra2');
-	if(inputContra2.type == "password"){
-		inputContra2.type = "text";
-		document.getElementById(`eye2`).classList.add('vistax');
-		document.querySelector(`#eye2 i`).classList.add('fa-eye');
-		document.querySelector(`#eye2 i`).classList.remove('fa-eye-slash');
+toggle.addEventListener('click', VerContraseña);
+
+VerContraseña2 = () => {
+	if(contra2.type == 'password'){
+		contra2.setAttribute('type', 'text');
+		toggle1.classList.remove('fa-eye-slash');
+		toggle1.classList.add('fa-eye');
 	}else{
-		inputContra2.type = "password";
-		document.getElementById(`eye2`).classList.add('vistax');
-		document.querySelector(`#eye2 i`).classList.remove('fa-eye');
-		document.querySelector(`#eye2 i`).classList.add('fa-eye-slash');
+		toggle1.classList.add('fa-eye-slash');
+		toggle1.classList.remove('fa-eye');
+		contra2.setAttribute('type', 'password');
 	}
-})
+}
 
-
+toggle1.addEventListener('click', VerContraseña2);
 
 inputs.forEach((input) => {
     input.addEventListener('keyup', validarFormu);
@@ -132,6 +123,13 @@ formulario.addEventListener('submit', (e) => {
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
+
+			//Ojo1
+			toggle.classList.remove('fa-eye');
+
+			//Ojo 2
+			toggle1.classList.remove('fa-eye');
+
 		}, 5000);
 
 		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {

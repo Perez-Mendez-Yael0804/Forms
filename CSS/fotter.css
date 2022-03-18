@@ -1,0 +1,61 @@
+/* ================ VARIABLES CSS ================  */
+@media (prefers-color-scheme: light) {
+	:root {
+		--footer-color: var(--bg-color);
+		--footer-color-alt: var(--bg-color-alt);
+		--footer-title: var(--main-color-500);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--footer-color: var(--bg-color-alt);
+		--footer-color-alt: var(--bg-color);
+		--footer-title: var(--title-color);
+	}
+}
+
+/* ================ FOOTER ================ */
+.footer {
+	border-top: 1px solid var(--lighter-color);
+	background-color: var(--footer-color);
+	margin-top: auto;
+}
+
+.footer__section-top {
+	padding: 2rem;
+	display: grid;
+	gap: 2rem;
+	justify-items: start;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 720px) {
+	.footer__section-top {
+		justify-items: center;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.footer__title {
+	color: var(--footer-title);
+}
+
+.footer__link {
+	color: var(--text-color);
+}
+
+.footer__link:hover {
+	color: var(--footer-title);
+	text-decoration: underline;
+}
+
+.footer__section-bottom {
+	background-color: var(--footer-color-alt);
+	padding: 1.25rem;
+	text-align: center;
+}
+
+.footer__company {
+	font-weight: 600;
+}

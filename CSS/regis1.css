@@ -126,28 +126,6 @@ body {
 	margin-top: 10px;
 }
 
-.contras {
-	width: 90%;
-	margin-bottom: -70px;
-	padding-bottom: 30px;
-}
-
-.vistax {
-	position: relative;
-	bottom: 45px;
-	left: 442px;
-	z-index: 100;
-	font-size: 24px;
-	width: 45px;
-	height: 45px;
-	background-color: #fff;
-	border-radius: 5px;
-	padding: 9px 9px;
-	display: flex;
-	cursor: pointer;
-	box-sizing: border-box;
-}
-
 .formulario__grupo-input {
 	position: relative;
 }
@@ -182,7 +160,8 @@ body {
 }
 
 .formulario__input-error-activo {
-	display: none;
+	display: flex;
+	color: #000000;
 }
 
 .formulario__validacion-estado {
@@ -266,16 +245,35 @@ body {
 =            Estilos para validacion          =
 =============================================*/
 
-.formulario__grupo-correcto .formulario__validacion-estado {
+#toggle,
+#toggle1 {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	font-size: 20px;
+	color: #000000;
+}
+
+.formulario__grupo-correcto {
 	color: #1ed12d;
 	opacity: 1;
+}
+
+.formulario__grupo-correcto.formulario__label {
+	color: #1ed12d;
+}
+
+.formulario__grupo-correcto .formulario__input {
+	border: 3px solid #1ed12d;
 }
 
 .formulario__grupo-incorrecto .formulario__label {
 	color: #bb2929;
 }
 
-.formulario__grupo-incorrecto .formulario__validacion-estado {
+.formulario__grupo-incorrecto {
 	color: #bb2929;
 	opacity: 1;
 }
